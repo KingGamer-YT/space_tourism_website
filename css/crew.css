@@ -1,0 +1,149 @@
+/* Start Crew */
+.crew {
+  /* Set background image for desktop and apply background settings */
+  background-image: url(../assets/crew/background-crew-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  padding-top: calc(136px + 76px); /* Padding to accommodate header and extra space */
+}
+.crew .container {
+  /* Relative positioning for container to position child elements absolutely */
+  position: relative;
+}
+.crew .content {
+  /* Flexbox for content layout with wrap and space-between alignment */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.crew .content .role {
+  /* Styling for role text */
+  margin-top: 154px; /* Top margin to position text */
+  font-family: var(--secend-font); /* Note: This seems to be a typo, should be --second-font */
+  color: #fff;
+  font-weight: normal;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.crew .content .name {
+  /* Styling for name text */
+  font-family: var(--secend-font); /* Note: This seems to be a typo, should be --second-font */
+  color: #fff;
+  font-size: 56px;
+  text-transform: uppercase;
+  margin-bottom: 27px;
+}
+.crew .content .bio {
+  /* Styling for biography text */
+  font-family: var(--main-font);
+  color: var(--secend-color); /* Note: This seems to be a typo, should be --second-color */
+  line-height: 32px;
+  margin-bottom: 100px;
+  width: 488px; /* Fixed width for bio text */
+}
+.crew .content img {
+  /* Positioning for images within content */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.crew .dots {
+  /* Flexbox for dots navigation with spacing */
+  display: flex;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.crew .dots .dot {
+  /* Styling for dot elements in navigation */
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #36373f;
+  cursor: pointer;
+}
+.crew .dots .dot:hover {
+  /* Change color on hover */
+  background-color: #292c34;
+}
+.crew .dots .dot.active {
+  /* Color for active dot */
+  background-color: #fff;
+}
+
+/* Tablet Device */
+@media (max-width: 1100px) {
+  .crew .content img {
+    /* Adjust image position and size for tablets */
+    position: initial;
+    margin-bottom: 32px;
+    width: 327px;
+  }
+}
+
+/* Tablet Device */
+@media (max-width: 768px) {
+  .crew {
+    /* Change background image for tablets */
+    background-image: url(../assets/crew/background-crew-tablet.jpg);
+  }
+  .crew .content {
+    /* Stack content vertically and center align items */
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .crew .info {
+    /* Flexbox for info section, stack items and center align text */
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  .crew .dots .dot {
+    /* Darker background color for dots on tablets */
+    background-color: #19191a;
+  }
+}
+
+/* Mobile Device */
+@media (max-width: 576px) {
+  .crew {
+    /* Change background image for mobile */
+    background-image: url(../assets/crew/background-crew-mobile.jpg);
+  }
+  .crew .content img {
+    /* Adjust image size and margin for mobile */
+    margin-bottom: 32px;
+    width: 327px;
+  }
+  .crew .content {
+    /* Center align content for mobile */
+    justify-content: center;
+  }
+  .crew .info {
+    /* Stack info section vertically and center align text for mobile */
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  .crew .info .role {
+    /* Adjust font size for role text on mobile */
+    font-size: 16px;
+  }
+  .crew .info .name {
+    /* Adjust font size for name text on mobile */
+    font-size: 24px;
+  }
+  .crew .info .bio {
+    /* Adjust font size and width for bio text on mobile */
+    font-size: 15px;
+    width: 327px;
+  }
+  .crew .dots .dot {
+    /* Darker background color for dots on mobile */
+    background-color: #19191a;
+  }
+}
+/* End Crew */

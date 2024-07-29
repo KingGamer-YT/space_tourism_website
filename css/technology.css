@@ -1,0 +1,154 @@
+/* Start Technology */
+.technology {
+  /* Set background image for desktop and apply background settings */
+  background-image: url(../assets/technology/background-technology-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  padding-top: calc(136px + 76px); /* Padding to accommodate header and extra space */
+  overflow: hidden;
+}
+.technology .content {
+  /* Flexbox layout for content with alignment and gap */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  gap: 80px;
+}
+.technology .enumirate {
+  /* Flexbox for enumerated items with column layout and gap */
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.technology .enumirate .num {
+  /* Style for number circles */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid var(--hover-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 32px;
+  font-family: var(--secend-font); /* Note: This seems to be a typo, should be --second-font */
+  cursor: pointer;
+}
+.technology .enumirate .num:hover {
+  /* Change border color on hover */
+  border-color: #fff;
+}
+.technology .enumirate .num.active {
+  /* Style for active number circle */
+  color: var(--main-color);
+  background-color: #fff;
+}
+.technology .content h2 {
+  /* Styling for secondary headings */
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  color: var(--secend-color); /* Note: This seems to be a typo, should be --second-color */
+  margin-bottom: 11px;
+  font-family: var(--main-font);
+  text-transform: uppercase;
+}
+.technology .content .name {
+  /* Styling for main technology name */
+  font-size: 56px;
+  font-family: var(--secend-font); /* Note: This seems to be a typo, should be --second-font */
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 17px;
+}
+.technology .content .description {
+  /* Styling for technology description */
+  width: 444px;
+  font-size: 18px;
+  color: var(--secend-color); /* Note: This seems to be a typo, should be --second-color */
+  line-height: 32px;
+  word-spacing: 1px;
+  margin-bottom: 97px;
+}
+.technology .content img {
+  /* Positioning for images within content */
+  position: absolute;
+  right: 0;
+  height: 400px;
+  
+}
+
+/* Adjustments for devices wider than 768px but smaller than 1100px */
+@media (max-width: 1100px) {
+  .technology .main-title {
+    /* Adjust margin for main title */
+    margin-left: 15px;
+  }
+  .technology .container {
+    /* Full width and no padding for container */
+    width: 100%;
+    padding: 0;
+  }
+  .technology .content {
+    /* Stack content vertically and center align items */
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .technology .content img {
+    /* Adjust image position and size for this breakpoint */
+    position: relative;
+    width: 100vw;
+    order: 4;
+  }
+  .technology .enumirate {
+    /* Change order and layout of enumerated items */
+    order: 3;
+    flex-direction: row;
+  }
+  .technology .content h2,
+  .technology .content .name,
+  .technology .content .description {
+    /* Center align text for content elements */
+    text-align: center;
+  }
+}
+
+/* Adjustments for tablets */
+@media (max-width: 768px) {
+  .technology {
+    /* Change background image for tablets */
+    background-image: url(../assets/technology/background-technology-tablet.jpg);
+  }
+}
+
+/* Adjustments for mobile devices */
+@media (max-width: 576px) {
+  .technology {
+    /* Change background image for mobile */
+    background-image: url(../assets/technology/background-technology-mobile.jpg);
+  }
+  .technology .enumirate {
+    /* Adjust gap between enumerated items for mobile */
+    gap: 16px;
+  }
+  .technology .enumirate .num {
+    /* Adjust size and font for number circles on mobile */
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  .technology .content h2 {
+    /* Adjust font size for secondary headings on mobile */
+    font-size: 14px;
+  }
+  .technology .content .name {
+    /* Adjust font size for technology name on mobile */
+    font-size: 24px;
+  }
+  .technology .content .description {
+    /* Adjust font size and width for description on mobile */
+    font-size: 15px;
+    width: 327px;
+  }
+}
+/* End Technology */

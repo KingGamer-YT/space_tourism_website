@@ -1,0 +1,117 @@
+/* Start Landing */
+.landing {
+  /* Set background image for desktop and apply background settings */
+  background-image: url(../assets/home/background-home-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  padding-top: calc(136px + 76px); /* Padding to accommodate header and extra space */
+}
+.landing .container {
+  /* Flexbox for container to align items and justify content */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: var(--main-padding-bottom); /* Custom padding bottom */
+}
+.landing .container .content {
+  width: 382px; /* Fixed width for content */
+}
+.landing .container h1 {
+  /* Styling for main heading */
+  font-size: 28px;
+  font-family: var(--main-font);
+  color: var(--secend-color); /* Note: This seems to be a typo, should be --second-color */
+  font-weight: 400;
+  letter-spacing: 4.72px;
+}
+.landing .container h1 span {
+  /* Styling for highlighted span in heading */
+  font-family: var(--secend-font); /* Note: This seems to be a typo, should be --second-font */
+  font-size: 150px;
+  color: #fff;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 24px 0;
+  letter-spacing: 0;
+}
+.landing .container p {
+  /* Styling for paragraph text */
+  font-size: 18px;
+  color: var(--secend-color); /* Note: This seems to be a typo, should be --second-color */
+  font-family: var(--main-font);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 32px;
+}
+.landing .container a {
+  /* Styling for the main button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 274px;
+  height: 274px;
+  background-color: #fff;
+  border-radius: 50%; /* Circular button */
+  font-family: var(--secend-font); /* Note: This seems to be a typo, should be --second-font */
+  font-size: 32px;
+  position: relative;
+  color: var(--main-color);
+  z-index: 5;
+  margin-bottom: 65px;
+}
+.landing .container a::before {
+  /* Adding an overlay effect to the button on hover */
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 0px;
+  width: 0px;
+  z-index: 3;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: 0.3s linear; /* Smooth transition */
+}
+.landing .container a:hover::before {
+  /* Expanding the overlay on hover */
+  height: 450px;
+  width: 450px;
+}
+
+/* Tablet Device */
+@media (max-width: 768px) {
+  .landing {
+    /* Change background image for tablets */
+    background-image: url(../assets/home/background-home-tablet.jpg);
+  }
+  .landing .container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+  }
+  .landing .container h1 {
+    text-align: center; /* Center align heading text */
+  }
+  .landing .container p {
+    margin-bottom: 156px; /* Increase bottom margin for spacing */
+  }
+}
+
+/* Phone Device */
+@media (max-width: 576px) {
+  .landing {
+    /* Change background image for mobile */
+    background-image: url(../assets/home/background-home-mobile.jpg);
+  }
+  .landing .container .content {
+    width: 327px; /* Adjust width for mobile */
+  }
+  .landing .container h1 span {
+    font-size: 80px; /* Reduce font size for span */
+  }
+  .landing .container p {
+    font-size: 15px; /* Reduce font size for paragraph */
+  }
+}
+/* End Landing */
